@@ -2,8 +2,10 @@ from fastapi import FastAPI
 
 from agents.diet_agent import DietAgent
 from agents.inventory_agent import InventoryAgent
+from agents.manager_agent import ManagerAgent
 from config import run_server
 from models import InventoryInput
+from models.ask_input import AskInput
 from models.diet_input import DietInput
 
 # Create a FastAPI instance app
@@ -25,9 +27,16 @@ async def inventory_endpoint(items: InventoryInput):
 
 # POST route that accepts DietInput object as request body
 @app.post("/diet/")
-async def inventory_endpoint(diet_input: DietInput):
+async def diet_endpoint(diet_input: DietInput):
     diet_data = DietAgent().run(diet_input)
     return diet_data
+
+
+# POST route that accepts AskInput object as request body
+@app.post("/ask/")
+async def manager_endpoint(ask_input: AskInput):
+    ask_output = await ManagerAgent.run(ask_input)
+    return ask_output
 
 
 # Entry point to run the server

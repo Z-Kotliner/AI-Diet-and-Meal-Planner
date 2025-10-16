@@ -18,7 +18,7 @@ class InventoryAgent:
     def __init__(self):
         self.llm = LLMClient()
 
-    def run(self, user_input: InventoryInput) -> InventoryResponse:
+    async def run(self, user_input: InventoryInput) -> InventoryResponse:
         prompt = create_prompt(user_input.items)
         response = self.clean_and_parse(prompt)
         return response

@@ -18,7 +18,7 @@ class DietAgent:
     def __init__(self):
         self.llm = LLMClient()
 
-    def run(self, diet_input: DietInput) -> DietResponse:
+    async def run(self, diet_input: DietInput) -> DietResponse:
         prompt = create_prompt(diet_input.items, diet_input.diet)
         response = self.get_suggested_recipe(prompt)
         return response
