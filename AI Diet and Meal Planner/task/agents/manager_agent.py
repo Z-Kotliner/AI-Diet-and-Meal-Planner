@@ -1,9 +1,9 @@
-from agents.diet_agent import DietAgent
-from agents.inventory_agent import InventoryAgent
+from agents import DietAgent
+from agents import InventoryAgent
 from models import InventoryInput
-from models.ask_input import AskInput
-from models.ask_output import AskOutput
-from models.diet_input import DietInput
+from models import AskInput
+from models import AskOutput
+from models import DietInput
 
 
 class ManagerAgent:

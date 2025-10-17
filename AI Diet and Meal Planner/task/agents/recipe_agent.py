@@ -1,7 +1,7 @@
 from agents import ManagerAgent, PlannerAgent
 from models import RecommenderResponse, PlannerInput
-from models.ask_input import AskInput
-from models.recommender_input import RecommenderInput
+from models import AskInput
+from models import RecommenderInput
 
 
 class MultiRecipeAgent:

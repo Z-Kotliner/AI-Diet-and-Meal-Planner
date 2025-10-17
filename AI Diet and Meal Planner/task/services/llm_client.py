@@ -1,17 +1,17 @@
 from typing import Dict, Any
-
-import dotenv
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import PromptTemplate
 from langchain_groq import ChatGroq
 from pydantic import BaseModel
-
-dotenv.load_dotenv()
+from config import settings
 
 
 class LLMClient:
     def __init__(self):
-        self.llm = ChatGroq(model="llama-3.3-70b-versatile", temperature=0.6, max_retries=2)
+        self.llm = ChatGroq(model="llama-3.3-70b-versatile",
+                            temperature=0.6,
+                            max_retries=2,
+                            api_key=settings.groq_api_key)
 
     def call_model_json(self, prompt: str, response_model: BaseModel) -> Dict[str, Any]:
         # Define the prompt template

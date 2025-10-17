@@ -1,5 +1,5 @@
-from models.diet_input import DietInput
-from models.diet_response import DietResponse
+from models import DietInput
+from models import DietResponse
 from services import LLMClient
 
 
