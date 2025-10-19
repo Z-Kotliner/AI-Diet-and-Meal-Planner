@@ -30,7 +30,7 @@ This project utilizes several tools and libraries to create the multi-agent meal
 - **Pydantic**: For data validation and serialization, ensuring inputs and outputs are correctly formatted.
 - **Uvicorn**: As the ASGI server to run the FastAPI application.
 - **Docker**: To containerize the application and make it easy to deploy and scale.
-- **GROq API**: Used for accessing structured recipe data, ingredients, and generating personalized meal suggestions based on user input. GROq's data models are used for retrieving recipe information and generating meal plans and dietary suggestions.
+- **Groq API**: Used for accessing structured recipe data, ingredients, and generating personalized meal suggestions based on user input. GROq's data models are used for retrieving recipe information and generating meal plans and dietary suggestions.
 - **LLM Integration**: The system is designed to interact with any **Large Language Models (LLMs)** to dynamically generate personalized meal plans, recipe ideas, and nutritional information. The specific LLM used (GROq) can be easily switched by modifying the `llm_client.py` and `.env` file, making the application flexible to use different LLM providers.
 
 ---
@@ -365,7 +365,7 @@ This will start the FastAPI server within a Docker container and expose it on po
     }
 ---
 
-This project was done as part of the fulfilment of the core topics of 'AI Diet and Meal Planner' HyperSkill course.
+This project was done as part of the fulfilment of the core topics of 'Introduction to AI Engineering with Python' HyperSkill course.
 #### Learn more at:
 https://hyperskill.org/projects/560
 
