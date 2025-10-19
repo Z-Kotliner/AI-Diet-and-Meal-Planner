@@ -1,0 +1,10 @@
+pydantic-settings
+langchain-groq
+langchain-core
+https://github.com/hyperskill/hs-test-python/archive/release.tar.gz
+fastapi[all]
+uvicorn
+pydantic
+python-dotenv
+httpx
+docker

@@ -23,7 +23,7 @@ app = FastAPI(title="AI Diet & Meal Planner")
 # Root endpoint
 @app.get("/", response_model=dict)
 async def root():
-    return {"message": "Success!"}
+    return {"message": "AI Diet and Meal Planner API is up and running!"}
 
 
 # POST route that accepts InventoryInput object as request body
