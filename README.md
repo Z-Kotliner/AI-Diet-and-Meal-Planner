@@ -367,5 +367,5 @@ This will start the FastAPI server within a Docker container and expose it on po
 
 This project was done as part of the fulfilment of the core topics of 'Introduction to AI Engineering with Python' HyperSkill course.
 #### Learn more at:
-https://hyperskill.org/projects/560
+https://hyperskill.org/projects/530
 
