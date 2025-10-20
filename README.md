@@ -42,7 +42,7 @@ To get started with the **AI Diet and Meal Planner**, you need to set up the env
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/your-username/AI-Diet-Meal-Planner.git
+   git https://github.com/Z-Kotliner/AI-Diet-and-Meal-Planner.git
    cd AI-Diet-Meal-Planner
 
 
@@ -120,7 +120,7 @@ This will start the FastAPI server within a Docker container and expose it on po
 
 ### 3. Diet Endpoint
 - **POST** /diet/
-- **Summary**: Filters the available ingredients based on the specified diet.
+- **Summary**: Filters the available ingredients based on the specified diet and also gives recipe suggestions.
 
 **Request Body**:
 
@@ -141,7 +141,7 @@ This will start the FastAPI server within a Docker container and expose it on po
 
 ### 4. Planner Endpoint
 - **POST** /plan/
-- **Summary**: Accepts a base recipe and returns a step-by-step plan for preparation.
+- **Summary**: Accepts a base recipe and returns the list of ingredients needed and a step-by-step plan for preparation.
 
 **Request Body**:
 
@@ -207,13 +207,13 @@ This will start the FastAPI server within a Docker container and expose it on po
 
 ### 5. Ask Endpoint
 - **POST** /ask/
-- **Summary**: Accepts a list of items and a diet type, and returns suggestions for meal planning.
+- **Summary**: Accepts a list of items and a diet type, and returns suggestions for meal planning for the given diet type.
 
 **Request Body**:
 
     {
         "items":["tomato","chicken","spinach"],
-        "diet":"keto"}
+        "diet":"keto"
     }
     
 
